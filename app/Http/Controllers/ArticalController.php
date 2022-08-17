@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artical;
+use App\Http\Resources\ArticalResource;
 use App\Http\Requests\StoreArticalRequest;
 use App\Http\Requests\UpdateArticalRequest;
-use App\Models\Artical;
 
 class ArticalController extends Controller
 {
@@ -15,7 +16,7 @@ class ArticalController extends Controller
      */
     public function index()
     {
-        return Artical::all();
+        return ArticalResource::collection(Artical::paginate());
     }
 
 
@@ -27,7 +28,14 @@ class ArticalController extends Controller
      */
     public function store(StoreArticalRequest $request)
     {
-        //
+        $data = new Artical();
+        $data->name = $request->name;
+        $data->author = $request->author;
+        $data->content = $request->content;
+        $data->publication_date = $request->publication_date;
+        $data->save();
+        $data->id;
+        return response()->json(['status'=>'success','message'=>'Artical Successfully Saved, Artical No.: '.$data->id.' ']);
     }
 
     /**
@@ -38,7 +46,7 @@ class ArticalController extends Controller
      */
     public function show(Artical $artical)
     {
-        //
+        return Artical::where('id', $artical->id)->get();
     }
 
 
@@ -51,7 +59,8 @@ class ArticalController extends Controller
      */
     public function update(UpdateArticalRequest $request, Artical $artical)
     {
-        //
+        $artical->update($request->all());
+        return response()->json(['status'=>'success','message'=>'Artical Updated']);
     }
 
     /**
@@ -62,6 +71,7 @@ class ArticalController extends Controller
      */
     public function destroy(Artical $artical)
     {
-        //
+        $artical->delete();
+        return response()->json(['status'=>'success','message'=>'Artical Deleted']);
     }
 }

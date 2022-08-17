@@ -13,7 +13,7 @@ class StoreArticalRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class StoreArticalRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required','min:5'],
+            'author' => ['required','min:5'],
+            'content' => ['required','min:100'],
+            'publication_date' => ['required','date_format:Y-m-d H:i:s'],
         ];
     }
 }
