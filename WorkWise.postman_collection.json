@@ -598,6 +598,213 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Candidate Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8004/api/candidates/filter?employment=fulltime&location=Edwinton&skills=php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8004",
+					"path": [
+						"api",
+						"candidates",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "employment",
+							"value": "fulltime"
+						},
+						{
+							"key": "location",
+							"value": "Edwinton"
+						},
+						{
+							"key": "skills",
+							"value": "php"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Candidate Search",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8004/api/candidates/filter?employment=fulltime&location=Edwinton&skills=php",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8004",
+							"path": [
+								"api",
+								"candidates",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "employment",
+									"value": "fulltime"
+								},
+								{
+									"key": "location",
+									"value": "Edwinton"
+								},
+								{
+									"key": "skills",
+									"value": "php"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8004"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Aug 2022 12:28:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Aug 2022 12:28:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.28"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 16,\n        \"name\": \"Elliott Rath\",\n        \"title\": \"Private Household Cook\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"South Vivian\",\n        \"last_active\": \"2022-07-20 14:06:45\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Leonora Altenwerth I\",\n        \"title\": \"Farmworker\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"Lake Modesto\",\n        \"last_active\": \"2022-07-21 09:58:52\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Araceli Quitzon\",\n        \"title\": \"Illustrator\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Clementinechester\",\n        \"last_active\": \"2022-07-20 15:36:28\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Laron Hayes Jr.\",\n        \"title\": \"Printing Machine Operator\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"Jaquelineberg\",\n        \"last_active\": \"2022-07-20 21:26:11\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Ila Murphy\",\n        \"title\": \"Producers and Director\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Grahamshire\",\n        \"last_active\": \"2022-07-20 16:01:03\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Prof. Travon Heaney\",\n        \"title\": \"Fish Game Warden\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Websterstad\",\n        \"last_active\": \"2022-07-20 14:59:02\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Cristal Wolf\",\n        \"title\": \"Screen Printing Machine Operator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Edwinton\",\n        \"last_active\": \"2022-07-20 14:42:22\",\n        \"skills\": \"php\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Aurelia Pfeffer II\",\n        \"title\": \"Manager of Food Preparation\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Port Elmer\",\n        \"last_active\": \"2022-07-21 10:02:42\",\n        \"skills\": \"json\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Ms. Rae Monahan\",\n        \"title\": \"City Planning Aide\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Bayerside\",\n        \"last_active\": \"2022-07-21 02:46:43\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Prof. Akeem Carter\",\n        \"title\": \"Computer Repairer\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"Lelandburgh\",\n        \"last_active\": \"2022-07-21 10:04:26\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Zander Doyle\",\n        \"title\": \"Title Abstractor\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Barrybury\",\n        \"last_active\": \"2022-07-21 02:05:26\",\n        \"skills\": \"php\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Anabel Heaney\",\n        \"title\": \"Textile Cutting Machine Operator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Runolfsdottirville\",\n        \"last_active\": \"2022-07-20 20:29:38\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 28,\n        \"name\": \"Vladimir Kovacek Sr.\",\n        \"title\": \"Home Economics Teacher\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"West Priceside\",\n        \"last_active\": \"2022-07-21 06:28:07\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Torey Balistreri\",\n        \"title\": \"Inspector\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"Satterfieldview\",\n        \"last_active\": \"2022-07-21 01:19:44\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Diamond Koss DDS\",\n        \"title\": \"Music Arranger and Orchestrator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"West Jalynview\",\n        \"last_active\": \"2022-07-20 14:22:13\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "Candidate Search",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8004/api/candidates/filter?employment=fulltime&location=Edwinton&skills=php",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8004",
+							"path": [
+								"api",
+								"candidates",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "employment",
+									"value": "fulltime"
+								},
+								{
+									"key": "location",
+									"value": "Edwinton"
+								},
+								{
+									"key": "skills",
+									"value": "php"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8004"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Aug 2022 12:39:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Aug 2022 12:39:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.28"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "49"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 16,\n        \"name\": \"Elliott Rath\",\n        \"title\": \"Private Household Cook\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"South Vivian\",\n        \"last_active\": \"2022-07-20 14:06:45\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Leonora Altenwerth I\",\n        \"title\": \"Farmworker\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"Lake Modesto\",\n        \"last_active\": \"2022-07-21 09:58:52\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Araceli Quitzon\",\n        \"title\": \"Illustrator\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Clementinechester\",\n        \"last_active\": \"2022-07-20 15:36:28\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Laron Hayes Jr.\",\n        \"title\": \"Printing Machine Operator\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"Jaquelineberg\",\n        \"last_active\": \"2022-07-20 21:26:11\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Ila Murphy\",\n        \"title\": \"Producers and Director\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Grahamshire\",\n        \"last_active\": \"2022-07-20 16:01:03\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Prof. Travon Heaney\",\n        \"title\": \"Fish Game Warden\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Websterstad\",\n        \"last_active\": \"2022-07-20 14:59:02\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Cristal Wolf\",\n        \"title\": \"Screen Printing Machine Operator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Edwinton\",\n        \"last_active\": \"2022-07-20 14:42:22\",\n        \"skills\": \"php\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Aurelia Pfeffer II\",\n        \"title\": \"Manager of Food Preparation\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Port Elmer\",\n        \"last_active\": \"2022-07-21 10:02:42\",\n        \"skills\": \"json\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Ms. Rae Monahan\",\n        \"title\": \"City Planning Aide\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Bayerside\",\n        \"last_active\": \"2022-07-21 02:46:43\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Prof. Akeem Carter\",\n        \"title\": \"Computer Repairer\",\n        \"type_of_employment\": \"partime\",\n        \"location\": \"Lelandburgh\",\n        \"last_active\": \"2022-07-21 10:04:26\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Zander Doyle\",\n        \"title\": \"Title Abstractor\",\n        \"type_of_employment\": \"fulltime\",\n        \"location\": \"Barrybury\",\n        \"last_active\": \"2022-07-21 02:05:26\",\n        \"skills\": \"php\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Anabel Heaney\",\n        \"title\": \"Textile Cutting Machine Operator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"Runolfsdottirville\",\n        \"last_active\": \"2022-07-20 20:29:38\",\n        \"skills\": \"laravel\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 28,\n        \"name\": \"Vladimir Kovacek Sr.\",\n        \"title\": \"Home Economics Teacher\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"West Priceside\",\n        \"last_active\": \"2022-07-21 06:28:07\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Torey Balistreri\",\n        \"title\": \"Inspector\",\n        \"type_of_employment\": \"contract\",\n        \"location\": \"Satterfieldview\",\n        \"last_active\": \"2022-07-21 01:19:44\",\n        \"skills\": \"api\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Diamond Koss DDS\",\n        \"title\": \"Music Arranger and Orchestrator\",\n        \"type_of_employment\": \"internship\",\n        \"location\": \"West Jalynview\",\n        \"last_active\": \"2022-07-20 14:22:13\",\n        \"skills\": \"mysql\",\n        \"created_at\": \"2022-08-17T12:16:20.000000Z\",\n        \"updated_at\": \"2022-08-17T12:16:20.000000Z\"\n    }\n]"
+				}
+			]
 		}
 	]
 }

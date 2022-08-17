@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticalController;
+use App\Http\Controllers\Candidate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('artical', ArticalController::class);
+Route::get('candidates', [Candidate::class,'index']);
+Route::get('candidates/filter', [Candidate::class,'filter']);
