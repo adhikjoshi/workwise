@@ -18,14 +18,14 @@ class Candidate extends Controller
         $skills = request()->query('skills');
         $candidates = new ModelsCandidate();
         if (isset($employment)) {
-            $candidates->where('type_of_employment', $employment);
+            $condition[] = ['type_of_employment',$employment];
         }
         if (isset($location)) {
-            $candidates->Where('location', $location);
+            $condition[] = ['location',$location];
         }
         if (isset($skills)) {
-            $candidates->Where('skills', $skills);
+            $condition[] = ['skills',$skills];
         }
-        return $candidates->get();
+        return $candidates->where($condition)->get();
     }
 }
