@@ -11,11 +11,8 @@ use Illuminate\Http\Client\Request;
 
 class ArticalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    // get list of article along with filters
     public function index()
     {
         $tags = request()->query('tags');
@@ -43,13 +40,7 @@ class ArticalController extends Controller
         return $response;
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreArticalRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+    // Store Articles
     public function store(StoreArticalRequest $request)
     {
         $data = new Artical();
@@ -63,12 +54,7 @@ class ArticalController extends Controller
         return response()->json(['status' => 'success', 'message' => 'Artical Successfully Saved, Artical No.: ' . $data->id . ' ']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Artical  $artical
-     * @return \Illuminate\Http\Response
-     */
+    // Show individual articles
     public function show(Artical $artical)
     {
         $data = Artical::where('id', $artical->id)->where('publication_date', '>=', date('Y-m-d H:i:s'))->first();
@@ -85,32 +71,21 @@ class ArticalController extends Controller
         return $response;
     }
 
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateArticalRequest  $request
-     * @param  \App\Models\Artical  $artical
-     * @return \Illuminate\Http\Response
-     */
+    // Update articles
     public function update(UpdateArticalRequest $request, Artical $artical)
     {
         $artical->update($request->all());
         return response()->json(['status' => 'success', 'message' => 'Artical Updated']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Artical  $artical
-     * @return \Illuminate\Http\Response
-     */
+    // Delete article
     public function destroy(Artical $artical)
     {
         $artical->delete();
         return response()->json(['status' => 'success', 'message' => 'Artical Deleted']);
     }
 
+    // Get sentiment of specific article content
     protected function get_sentiment($val)
     {
         $apiURL = 'https://sentim-api.herokuapp.com/api/v1/';

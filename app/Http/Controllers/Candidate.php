@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class Candidate extends Controller
 {
+    // Get list of candidates
     public function index()
     {
         return  ModelsCandidate::all();
     }
+
+    // filter candidates 
     public function filter()
     {
         $employment = request()->query('employment');
@@ -27,5 +30,20 @@ class Candidate extends Controller
             $condition[] = ['skills',$skills];
         }
         return $candidates->where($condition)->get();
+    }
+
+    // Get list of all available locations
+    function location_list(){
+
+    }
+
+    // Get list of all skills 
+    function skills_list(){
+        
+    }
+
+    // get list of emplyment lists
+    function employment_list(){
+        
     }
 }

@@ -23,6 +23,7 @@ class StoreArticalRequest extends FormRequest
      */
     public function rules()
     {
+        // Store Articles Filters
         return [
             'name' => ['required','min:5'],
             'author' => ['required','min:5'],

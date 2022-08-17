@@ -23,6 +23,7 @@ class UpdateArticalRequest extends FormRequest
      */
     public function rules()
     {
+        //Update Article PUT and PATCH rule
         $method = $this->method();
         if ($method == 'PUT') {
             return [

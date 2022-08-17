@@ -21,6 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+// CRUD API for article 
 Route::apiResource('artical', ArticalController::class);
+
+// Get candidates :: api/candidates
 Route::get('candidates', [Candidate::class,'index']);
+
+// Filter candidates :: api/candidates/filter?employment=fulltime&location=Barrybury&skills=php
 Route::get('candidates/filter', [Candidate::class,'filter']);

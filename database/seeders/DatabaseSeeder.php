@@ -8,11 +8,8 @@ use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+
+    // Create Fake articles in database
     public function run()
     {
         $faker = Faker::create();

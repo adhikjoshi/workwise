@@ -8,11 +8,8 @@ use Illuminate\Database\Seeder;
 
 class CandidateSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
+    // Create Fake candidates in database
     public function run()
     {
         $faker = Faker::create();
