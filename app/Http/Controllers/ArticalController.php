@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Resources\ArticalResource;
 use App\Http\Requests\StoreArticalRequest;
 use App\Http\Requests\UpdateArticalRequest;
+use Illuminate\Http\Client\Request;
 
 class ArticalController extends Controller
 {
@@ -17,15 +18,29 @@ class ArticalController extends Controller
      */
     public function index()
     {
-        $article = Artical::where('publication_date', '>=', date('Y-m-d H:i:s'))->get();
+        $tags = request()->query('tags');
+        $author = request()->query('author');
+        $filter_both = request()->query('filter_both');
+        $article = Artical::where('publication_date', '>=', date('Y-m-d H:i:s'));
+        if ($filter_both == 1) {
+            $article->whereRaw("find_in_set('" . $tags . "' , tags)")->where('author', 'like', '%' . $author . '%');
+        } else {
+            if (isset($tags)) {
+                $article->whereRaw("find_in_set('" . $tags . "' , tags)");
+            } elseif (isset($author)) {
+                $article->where('author', 'like', '%' . $author . '%');
+            }
+        }
+        $response = $article->get();
+        //$article = Artical::where('publication_date', '>=', date('Y-m-d H:i:s'))->get();
         //$data =  $this->get_sentiment('Hi, good morning. This is Adhik Joshi');
-        foreach ($article as $key => $value) {
+        foreach ($response as $key => $value) {
             $sentiment =  $this->get_sentiment($value->content);
-            $article[$key]->sentiment = $sentiment['result']['type'];
-            unset($article[$key]->content);
+            $response[$key]->sentiment = $sentiment['result']['type'];
+            unset($response[$key]->content);
         }
         //return ArticalResource::collection(Artical::paginate());
-        return $article;
+        return $response;
     }
 
 
@@ -41,6 +56,7 @@ class ArticalController extends Controller
         $data->name = $request->name;
         $data->author = $request->author;
         $data->content = $request->content;
+        $data->tags = $request->tags;
         $data->publication_date = $request->publication_date;
         $data->save();
         $data->id;
@@ -61,6 +77,7 @@ class ArticalController extends Controller
             'name' => $data->name,
             'content' => $data->content,
             'author' => $data->author,
+            'tags' => $data->tags,
             'publication_date' => $data->publication_date,
             'santiment' => $sentiment['result']['type'],
         ];

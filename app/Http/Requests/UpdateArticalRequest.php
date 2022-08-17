@@ -23,11 +23,24 @@ class UpdateArticalRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => ['required','min:5'],
-            'author' => ['required','min:5'],
-            'content' => ['required','min:100'],
-            'publication_date' => ['required','date_format:Y-m-d H:i:s'],
-        ];
+        $method = $this->method();
+        if ($method == 'PUT') {
+            return [
+                'name' => ['required','min:5'],
+                'author' => ['required','min:5'],
+                'content' => ['required','min:100'],
+                'publication_date' => ['required','date_format:Y-m-d H:i:s'],
+            ];
+        } else {
+            return [
+                'name' => ['sometimes','min:5'],
+                'tags' => ['sometimes','min:2'],
+                'author' => ['sometimes','min:5'],
+                'content' => ['sometimes','min:100'],
+                'publication_date' => ['sometimes','date_format:Y-m-d H:i:s'],
+            ];
+        }
+        
+        
     }
 }

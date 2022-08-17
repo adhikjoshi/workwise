@@ -14,6 +14,7 @@ class Artical extends Model
         'author',
         'content',
         'name',
+        'tags',
     ];
 
 }
